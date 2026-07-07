@@ -70,10 +70,13 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="hidden lg:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#DAA520] to-[#B87333] text-[#050508] font-semibold text-sm rounded-lg hover:shadow-lg hover:shadow-[#DAA520]/20 transition-all duration-300">
+            <Link
+              to="/create-event"
+              className="hidden lg:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#DAA520] to-[#B87333] text-[#050508] font-semibold text-sm rounded-lg hover:shadow-lg hover:shadow-[#DAA520]/20 transition-all duration-300"
+            >
               <Globe className="w-4 h-4" />
               Create Event
-            </button>
+            </Link>
             <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 text-white/70 hover:text-white">
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -103,10 +106,13 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <button className="w-full mt-4 flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#DAA520] to-[#B87333] text-[#050508] font-semibold text-sm rounded-lg">
+              <Link
+                to="/create-event"
+                className="w-full mt-4 flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#DAA520] to-[#B87333] text-[#050508] font-semibold text-sm rounded-lg"
+              >
                 <Globe className="w-4 h-4" />
                 Create Event
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}
