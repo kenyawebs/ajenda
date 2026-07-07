@@ -18,16 +18,19 @@ export default function Footer() {
               <span className="text-2xl font-bold text-gradient">Ajenda</span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed">
-              Revolutionary global events platform connecting cultures through authentic experiences. From Kenya to the world.
+              Revolutionary global events platform connecting cultures through authentic experiences.
+              From Kenya to the world.
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-[#DAA520] uppercase tracking-wider mb-4">Platform</h4>
             <ul className="space-y-3">
-              {["Discover Events", "Create Event", "Browse Categories", "For Organizers", "Pricing"].map((item) => (
-                <li key={item}><a href="#" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">{item}</a></li>
-              ))}
+              <li><Link to="/events" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">Discover Events</Link></li>
+              <li><Link to="/create-event" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">Create Event</Link></li>
+              <li><Link to="/categories" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">Browse Categories</Link></li>
+              <li><Link to="/organizers" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">For Organizers</Link></li>
+              <li><Link to="/pricing" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">Pricing</Link></li>
             </ul>
           </div>
 
@@ -35,7 +38,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#DAA520] uppercase tracking-wider mb-4">Top Categories</h4>
             <ul className="space-y-3">
               {["Arts & Entertainment", "Sports Events", "Cultural Festivals", "Food & Drink", "Technology", "Community"].map((item) => (
-                <li key={item}><a href="#" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">{item}</a></li>
+                <li key={item}><Link to="/categories" className="text-white/50 hover:text-[#DAA520] transition-colors text-sm">{item}</Link></li>
               ))}
             </ul>
           </div>
